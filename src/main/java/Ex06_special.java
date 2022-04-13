@@ -3,7 +3,7 @@ public class Ex06_special {
         int f = 1;
         int i;
 
-        for (i = 5; i > 0; i--) {
+        for (i = 9; i > 0; i--) {
             f *= i;
             System.out.println("중간 계산값 :"+ f);
         }
