@@ -1,0 +1,16 @@
+import java.util.Scanner;
+
+public class Java0418_star_1 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int star = sc.nextInt();
+
+        for (int i =star; i >0; i--) {
+            for (int j=0; j <i; j++) {
+                System.out.printf("*");
+            }
+            System.out.println();
+        }
+    }
+}
