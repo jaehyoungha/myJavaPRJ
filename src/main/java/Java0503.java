@@ -1,18 +1,34 @@
-import java.util.HashSet;
 import java.util.Scanner;
 
 public class Java0503 {
     public static void main(String[] args) {
-                Scanner sc = new Scanner(System.in);
-                HashSet<Integer> q = new HashSet<Integer>();
+        Scanner in = new Scanner(System.in);
 
-                for (int i = 0; i <10; i++) {
-                    q.add(sc.nextInt()%42);
+        String arr[] = new String[in.nextInt()];
+
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = in.next();
+        }
+
+        in.close();
+
+        for (int i = 0; i < arr.length; i++) {
+
+            int cnt = 0;    // 연속횟수
+            int sum = 0;    // 누적 합산
+
+            for (int j = 0; j < arr[i].length(); j++) {
+
+                if (arr[i].charAt(j) == 'O') {
+                    cnt++;
+                } else {
+                    cnt = 0;
                 }
-                sc.close();
-                System.out.print(q.size());
+                sum += cnt;
             }
 
-
+            System.out.println(sum);
         }
+    }
+}
 

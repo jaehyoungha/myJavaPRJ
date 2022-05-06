@@ -6,8 +6,8 @@ public class Java0418_star_1 {
 
         int star = sc.nextInt();
 
-        for (int i =star; i >0; i--) {
-            for (int j=0; j <i; j++) {
+        for (int i =1; i <=star; i++) {
+            for (int j=star; j >=i; j--) {
                 System.out.printf("*");
             }
             System.out.println();
